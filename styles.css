@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/*
+    ## Colors
+
+    ### Primary
+
+    Bright orange: hsl(31, 77%, 52%)
+    Dark cyan: hsl(184, 100%, 22%)
+    Very dark cyan: hsl(179, 100%, 13%)
+
+    ### Neutral
+
+    Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+    Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: hsl(0, 0%, 95%);
+    font-weight: 700;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    padding: 2rem 0 1rem 0;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    padding: 1.5rem 1.5rem 1.5rem 0;
+}
+
+.icon {
+    width: 4.5rem;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 0.6rem 1.5rem;
+    background-color: hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%);
+    border-radius: 1.5rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.sedans .btn {
+    color: hsl(31, 77%, 52%);
+}
+
+.suvs .btn {
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury .btn {
+    color: hsl(179, 100%, 13%);
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: inherit;
+    color: hsla(0, 0%, 100%, 0.75);;
+}
+
+.sedans {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.box {
+    padding: 3rem;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom {
+    margin-top: auto;
+}
+
+.container {
+    max-width: 1010px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:375px) {
+    .container {
+        flex-direction: column;
+        width: auto;
+        margin: 4rem 1.5rem;
+    }
+    .box {
+        height: auto;
+    }
+    .sedans {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+    .luxury {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+}
+
+@media (max-width:820px) {
+    .container {
+        flex-direction: column;
+        width: 350px;
+        margin: 3rem auto;
+    }
+    .sedans {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+    .luxury {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+}
